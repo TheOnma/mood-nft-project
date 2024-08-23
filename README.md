@@ -1,6 +1,127 @@
-Happy SVG:
-data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgd2lkdGg9IjQwMCIgIGhlaWdodD0iNDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgZmlsbD0ieWVsbG93IiByPSI3OCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGcgY2xhc3M9ImV5ZXMiPgogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSI4MiIgcj0iMTIiLz4KICAgIDxjaXJjbGUgY3g9IjEyNyIgY3k9IjgyIiByPSIxMiIvPgogIDwvZz4KICA8cGF0aCBkPSJtMTM2LjgxIDExNi41M2MuNjkgMjYuMTctNjQuMTEgNDItODEuNTItLjczIiBzdHlsZT0iZmlsbDpub25lOyBzdHJva2U6IGJsYWNrOyBzdHJva2Utd2lkdGg6IDM7Ii8+Cjwvc3ZnPg==
+# MoodNFT
 
-Sad SVG:
-data:image/svg+xml;base64,
-PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHdpZHRoPSIxMDI0cHgiIGhlaWdodD0iMTAyNHB4IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik01MTIgNjRDMjY0LjYgNjQgNjQgMjY0LjYgNjQgNTEyczIwMC42IDQ0OCA0NDggNDQ4IDQ0OC0yMDAuNiA0NDgtNDQ4Uzc1OS40IDY0IDUxMiA2NHptMCA4MjBjLTIwNS40IDAtMzcyLTE2Ni42LTM3Mi0zNzJzMTY2LjYtMzcyIDM3Mi0zNzIgMzcyIDE2Ni42IDM3MiAzNzItMTY2LjYgMzcyLTM3MiAzNzJ6Ii8+CiAgPHBhdGggZmlsbD0iI0U2RTZFNiIgZD0iTTUxMiAxNDBjLTIwNS40IDAtMzcyIDE2Ni42LTM3MiAzNzJzMTY2LjYgMzcyIDM3MiAzNzIgMzcyLTE2Ni42IDM3Mi0zNzItMTY2LjYtMzcyLTM3Mi0zNzJ6TTI4OCA0MjFhNDguMDEgNDguMDEgMCAwIDEgOTYgMCA0OC4wMSA0OC4wMSAwIDAgMS05NiAwem0zNzYgMjcyaC00OC4xYy00LjIgMC03LjgtMy4yLTguMS03LjRDNjA0IDYzNi4xIDU2Mi41IDU5NyA1MTIgNTk3cy05Mi4xIDM5LjEtOTUuOCA4OC42Yy0uMyA0LjItMy45IDcuNC04LjEgNy40SDM2MGE4IDggMCAwIDEtOC04LjRjNC40LTg0LjMgNzQuNS0xNTEuNiAxNjAtMTUxLjZzMTU1LjYgNjcuMyAxNjAgMTUxLjZhOCA4IDAgMCAxLTggOC40em0yNC0yMjRhNDguMDEgNDguMDEgMCAwIDEgMC05NiA0OC4wMSA0OC4wMSAwIDAgMSAwIDk2eiIvPgogIDxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik0yODggNDIxYTQ4IDQ4IDAgMSAwIDk2IDAgNDggNDggMCAxIDAtOTYgMHptMjI0IDExMmMtODUuNSAwLTE1NS42IDY3LjMtMTYwIDE1MS42YTggOCAwIDAgMCA4IDguNGg0OC4xYzQuMiAwIDcuOC0zLjIgOC4xLTcuNCAzLjctNDkuNSA0NS4zLTg4LjYgOTUuOC04OC42czkyIDM5LjEgOTUuOCA4OC42Yy4zIDQuMiAzLjkgNy40IDguMSA3LjRINjY0YTggOCAwIDAgMCA4LTguNEM2NjcuNiA2MDAuMyA1OTcuNSA1MzMgNTEyIDUzM3ptMTI4LTExMmE0OCA0OCAwIDEgMCA5NiAwIDQ4IDQ4IDAgMSAwLTk2IDB6Ii8+Cjwvc3ZnPg==
+MoodNFT is an ERC721 smart contract that allows users to mint NFTs that reflect their mood. Each NFT can flip between two moods: Happy and Sad. The contract is built using Solidity and leverages OpenZeppelin's ERC721 implementation.
+
+## Table of Contents
+
+- [MoodNFT](#moodnft)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+    - [Steps](#steps)
+  - [Usage](#usage)
+    - [Deploying the Contract](#deploying-the-contract)
+    - [Interacting with the Contract](#interacting-with-the-contract)
+  - [Contract Overview](#contract-overview)
+    - [Minting NFTs](#minting-nfts)
+    - [Flipping Mood](#flipping-mood)
+    - [Token URI](#token-uri)
+  - [Error Handling](#error-handling)
+  - [License](#license)
+
+## Features
+
+- **Mint MoodNFT:** Users can mint an NFT that starts with a "Happy" mood.
+- **Flip Mood:** The owner of the NFT can flip its mood between "Happy" and "Sad".
+- **Dynamic Metadata:** The NFT's metadata updates dynamically based on its mood.
+
+## Installation
+
+To use this contract, you need to have the following tools installed:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Foundry](https://getfoundry.sh/) for Solidity development
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TheOnma/mood-nft-project.git
+   cd mood-nft
+   ```
+
+2. Install dependencies:
+   ```bash
+   forge install
+   ```
+
+3. Compile the smart contract:
+   ```bash
+   forge build
+   ```
+
+## Usage
+
+### Deploying the Contract
+
+To deploy the MoodNFT contract, you will need to pass in the SVG image URIs for both the "Happy" and "Sad" states:
+
+```solidity
+string memory sadSvgImageUri = "data:image/svg+xml;base64,...";
+string memory happySvgImageUri = "data:image/svg+xml;base64,...";
+
+MoodNft moodNft = new MoodNft(sadSvgImageUri, happySvgImageUri);
+```
+
+### Interacting with the Contract
+
+1. **Minting an NFT:**
+   ```solidity
+   moodNft.mintNft();
+   ```
+
+   This mints a new NFT with an initial mood set to "Happy".
+
+2. **Flipping the Mood:**
+   ```solidity
+   moodNft.flipMood(tokenId);
+   ```
+
+   Only the owner of the NFT can flip its mood between "Happy" and "Sad".
+
+3. **Getting the Token URI:**
+   ```solidity
+   string memory tokenUri = moodNft.tokenURI(tokenId);
+   ```
+
+   This returns the metadata of the NFT, including its mood-specific image.
+
+## Contract Overview
+
+### Minting NFTs
+
+The `mintNft` function allows any user to mint a new MoodNFT. The newly minted NFT will start with the "Happy" mood.
+
+### Flipping Mood
+
+The `flipMood` function allows the owner of the NFT to toggle its mood between "Happy" and "Sad". This operation is restricted to the NFT's owner.
+
+### Token URI
+
+The `tokenURI` function generates the metadata URI for the NFT. The metadata includes the name, description, attributes, and mood-specific image URI of the NFT.
+
+```json
+{
+  "name": "Mood NFT",
+  "description": "An NFT that reflects the owners mood.",
+  "attributes": [
+    {
+      "trait_type": "moodiness",
+      "value": 100
+    }
+  ],
+  "image": "<imageURI>"
+}
+```
+
+## Error Handling
+
+The contract includes custom error handling to ensure that only the owner of an NFT can flip its mood:
+
+- **`MoodNft__CantFlipMoodIfNotOwner`:** This error is thrown if a user who is not the owner of the NFT attempts to flip its mood.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```
